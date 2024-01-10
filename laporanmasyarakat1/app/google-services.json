@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "910872792766",
+    "project_id": "laporanmasyarakat1-616c4",
+    "storage_bucket": "laporanmasyarakat1-616c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910872792766:android:224b6700e57b08368418ef",
+        "android_client_info": {
+          "package_name": "com.yeni.laporanmasyarakat1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsHCmIG4S4K5deCP5H0IvVjVrbTIvwwAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

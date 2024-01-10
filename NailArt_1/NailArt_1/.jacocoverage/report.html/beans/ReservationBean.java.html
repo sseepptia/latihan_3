@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ReservationBean.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;NailArt_1&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">beans</a> &gt; <span class="el_source">ReservationBean.java</span></div><h1>ReservationBean.java</h1><pre class="source lang-java linenums">package beans;
+
+import DAO.DAOReservation;
+import POJO.Reservation;
+
+import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import java.io.Serializable;
+import javax.faces.context.FacesContext;
+import javax.faces.application.NavigationHandler;
+
+@ManagedBean
+@SessionScoped
+<span class="fc" id="L15">public class ReservationBean implements Serializable {</span>
+
+<span class="fc" id="L17">    private Reservation reservation = new Reservation();</span>
+<span class="fc" id="L18">    private boolean insertionSuccess = false;</span>
+
+    // Inject the DAO
+<span class="fc" id="L21">    private DAOReservation reservationDAO = new DAOReservation();</span>
+    
+    public void init() {
+<span class="nc" id="L24">        reservation = new Reservation();</span>
+<span class="nc" id="L25">    }</span>
+
+    public void initUpdate(Integer id) {
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (id != null) {</span>
+<span class="nc" id="L29">            reservation = reservationDAO.getReservationById(id);</span>
+        }
+<span class="nc" id="L31">    }</span>
+
+    public String redirectToUpdate(Integer id) {
+<span class="nc" id="L34">        initUpdate(id);</span>
+<span class="nc" id="L35">        String redirectUrl = &quot;update.xhtml?id=&quot; + id + &quot;&amp;faces-redirect=true&quot;;</span>
+<span class="nc" id="L36">        return redirectUrl;</span>
+    }
+
+    public Reservation getReservation() {
+<span class="nc" id="L40">        return reservation;</span>
+    }
+
+    public List&lt;Reservation&gt; getReservations() {
+<span class="fc" id="L44">        return reservationDAO.getAllReservations();</span>
+    }
+
+    public boolean isInsertionSuccess() {
+<span class="nc" id="L48">        return insertionSuccess;</span>
+    }
+
+    public String submitReservation() {
+        // Save the reservation using the DAO
+<span class="nc" id="L53">        insertionSuccess = reservationDAO.insertReservation(reservation);</span>
+
+        // You can handle success or failure as needed here
+<span class="nc bnc" id="L56" title="All 2 branches missed.">        if (insertionSuccess) {</span>
+            // Success handling, e.g., redirect to a success page
+<span class="nc" id="L58">            return &quot;success.xhtml&quot;;</span>
+        } else {
+            // Failure handling, e.g., stay on the same page or redirect to an error page
+<span class="nc" id="L61">            return &quot;error.xhtml&quot;;</span>
+        }
+    }
+
+    public String updateReservation() {
+<span class="nc" id="L66">        boolean updated = reservationDAO.updateReservation(reservation);</span>
+<span class="nc" id="L67">        init();</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        if (updated) {</span>
+<span class="nc" id="L69">            return &quot;dashboard&quot;; // You can redirect to a success page</span>
+        } else {
+            // Handle the case where the update failed, e.g., display an error message
+<span class="nc" id="L72">            return &quot;error&quot;; // You can redirect to an error page</span>
+        }
+    }
+
+    public String deleteReservation(Integer id) {
+<span class="nc" id="L77">        System.out.println(&quot;Deleting reservation: &quot; + id);</span>
+
+<span class="nc" id="L79">        boolean deleted = reservationDAO.deleteReservation(id);</span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">        if (deleted) {</span>
+<span class="nc" id="L81">            return &quot;dashboard&quot;; // You can redirect to a success page</span>
+        } else {
+<span class="nc" id="L83">            return &quot;error&quot;; // You can redirect to an error page</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+
+*{
+  font-family: 'Chakra Petch', sans-serif;
+  margin: 0;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+  }
+
+@keyframes fadeIn{
+0%{
+  transform: translateY(45px);
+  opacity: 0;
+  }
+  }
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+    background: #FFFFFF;
+  }
+
+html::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+html::-webkit-scrollbar-thumb {
+    background: #E798AE;
+    border-radius: 5rem;
+  }
+
+section{
+    padding: 50px;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #FBA1A1;
+    color: #333;
+    font-size: 15px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+.btn:hover{
+    color: #333;
+    background: #FFFFFF;
+    text-decoration: none;
+}
+
+.header{
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+  box-shadow: #D885A3;
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.header .logo{
+    font-size: 25px;
+    color: #4C3A51;
+    font-weight: bolder;
+}
+
+.header .logo i{
+    color: #B25068;
+    padding: 5px;
+}
+
+.header .navbar a{
+    margin: 0 10px;
+    color: #4C3A51;
+    font-size: 15px;
+}
+
+.header .navbar a:hover{
+    text-decoration: underline;
+}
+
+.header div{
+    font-size: 25px;
+    margin-left: 10px;
+    color: #4C3A51;
+    cursor: pointer;
+}
+
+.header div:hover{
+    color: #D885A3;
+}
+
+.Slideshow{
+    width: 100%;
+    position: relative;
+}
+  
+.Slideshow .slide{
+    display: none;
+}
+  
+.Slideshow .slide img{
+    width: 100%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+.Slideshow .navigation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+.Slideshow .navigation .prev, .Slideshow .navigation .next{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,0.2);
+    user-select: none;
+    transition: 0.6s ease;
+}
+  
+.Slideshow .navigation .prev:hover, .Slideshow .navigation .next:hover{
+    background: rgba(0,0,0,1);
+}
+  
+.about {
+    display: flex;
+    display: -webkit-box;
+    align-items: center;
+    -webkit-box-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+.about .image {
+    -webkit-box-flex: 1;
+    flex: 1 1 400px;
+  }
+  
+.about .image img {
+    width: 100%;
+  }
+  
+.about .content {
+    -webkit-box-flex: 1;
+    flex: 1 1 400px;
+  }
+  
+.about .content h3 {
+    color: #3C2C3E;
+    font-size: 20px;
+  }
+  
+.about .content h3 span {
+    color:rgb(222, 175, 142);
+    font-size: 40px;
+  }
+  
+.about .content p {
+    font-size: 13px;
+    color: #666;
+    padding: 5px 0;
+    line-height: 2;
+  }
+  
+.about .content .btn {
+    color: #333;
+    background: #FFC4C4;
+  }
+  
+.about .content .btn:hover {
+    color: #333;
+    background: rgb(222, 175, 142);
+  }
+  
+  .heading {
+    padding-bottom: 2px;
+    text-align: center;
+    font-size: 35px;
+    color: #4C3A51;
+    padding: 20px;
+  }
+  
+  .heading span {
+    color: rgb(222, 175, 142);
+  }
+  
+  .Price .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .Price .box-container .box {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Price .box-container .box:hover .image img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
+  
+  .Price .box-container .box .image {
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .Price .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+  }
+  
+  .Price .box-container .box .content {
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .Price .box-container .btn{
+    color: #333;
+    background: #FFC4C4;
+  }
+  
+  .Price .box-container .btn:hover{
+    color: #FFC4C4;
+    background: #845460;
+  }
+  
+  .Gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .Gallery .box-container .box {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Gallery .box-container .box:hover .image img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
+  
+  .Gallery .box-container .box .image {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .Gallery .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+  }
+  
+  .Gallery .box-container .box .content {
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .Gallery .box-container .btn{
+    color: #333;
+    background: rgb(222, 175, 142);
+  }
+  
+  .Gallery .box-container .btn:hover{
+    color:rgb(222, 175, 142);
+    background: rgb(222, 175, 142);
+  }
+  
+  #con2{width:500px;padding:30px;}
+            p{margin-bottom:10px;}
+            label{display:inline-block;width:150px;}
+
+  .Gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 15px;
+  }
+  
+  .services .box-container .box {
+    background: #eee;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px/50px;
+  }
+  
+  .services .box-container .box:hover {
+    border-radius: 10px/25px;
+  }
+
+  .services .box-container .box i {
+    height: 65px;
+    width: 65px;
+    line-height:65px;
+    font-size: 30px;
+    color: #fff;
+    background:rgb(222, 175, 142);
+    border-radius: 50%;
+    margin-bottom: 5px;
+  }
+  
+  .services .box-container .box h3 {
+    font-size: 22px;
+    color: #3C2C3E;
+    padding: 10px;
+  }
+  
+  .footer .share {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .footer .credit {
+    text-align: center;
+    color: rgb(222, 175, 142);
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 2.5rem;
+  }
+  
+  .footer .credit span {
+    color: rgb(222, 175, 142);
+    opacity: 0.5;
+  }
+
+.admin{
+    margin-top: 80px;
+    text-decoration: none;
+}
+
+.admin .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 15px;
+  }
+  
+  footer {
+    background-color: rgb(222, 175, 142);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+}
+
+.footer .share a::before {
+    background:  rgb(222, 175, 142);
+  }
+  
+  .footer .share a i {
+    padding-right: .5rem;
+  }
+
+.location{
+    display: flex; 
+    gap: 150px;   
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.location h3{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.location p{
+    margin-bottom: 10px;
+}
+
+.Address{
+    flex-grow: 1;
+    flex-basis: 100%;
+    line-height: 1.3;
+}
+
+.Contact{
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.Hours {
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.copyright {
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid grey;
+}
+
+  
+  .admin .box-container .box {
+    background: #eee;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px/50px;
+  }
+  
+  .admin .box-container .box:hover {
+    border-radius: 10px/25px;
+  }
+
+  .admin .box-container .box i {
+    height: 65px;
+    width: 65px;
+    line-height:65px;
+    font-size: 30px;
+    color: #fff;
+    background: rgb(222, 175, 142);
+    border-radius: 50%;
+    margin-bottom: 5px;
+  }
+  
+  .admin .box-container .box h3 {
+    font-size: 22px;
+    color: #3C2C3E;
+    padding: 10px;
+  }

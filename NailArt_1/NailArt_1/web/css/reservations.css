@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Italianno&family=PT+Serif&family=Playfair+Display&family=Sacramento&family=Young+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins' sans-serif;
+}
+
+.banner{
+    min-height: 100vh;
+    background-image:url(Image/res.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+.card-img{
+    padding-left: 45px;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+h3{
+    font-size: 20px;
+    text-align: center;
+}
+
+h2{
+    font-size: 50px;
+    padding-left: 10px;
+    
+}
+
+.banner .card-content {
+    padding-top: 20px;
+}
+
+.form-row{
+    padding-top: 20px;
+}
+
+p{
+    font-size: 15px;
+}
+
+.form-row input{
+    justify-content: center;
+    background-color: antiquewhite;
+    height: 30px;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 1.3rem;
+    border: 1px solid antiquewhite;
+    border-radius: 5px;
+    outline: none;
+}
+
+.reserved input{
+    background-color: #A4907C;
+    font-weight: bold;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    
+}
+

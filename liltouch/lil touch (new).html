@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lil' Touch</title>
+    <link rel="stylesheet" href="cosmetics1.css">
+</head>
+<body>
+
+    <!--Header section starts-->
+    <header>
+        <a href="#" class="logo">Lil' Touch</a>
+
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Category">Category</a>
+            <a href="#OnTrending">On Trending</a>
+            <a href="#FeaturedBrands">Featured Brands</a>
+            <a href="about us.html">About Us</a>
+        </nav>
+    </header>
+    <!--Header section ends-->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<!-- Slideshow container starts -->
+<div class="Slideshow">
+    <div class="slide">
+      <img src="pic1.png" alt="" height="500">
+    </div>
+    <div class="slide">
+      <img src="pic2.png" alt="" height="500">
+    </div>
+    <div class="slide">
+      <img src="pic3.png" alt="" height="500">
+    </div>
+    <div class="slide">
+        <img src="pic4.png" alt="" height="500">
+    </div>
+    <div class="slide">
+      <img src="pic6.png" alt="" height="500">
+  </div>
+    <div class="navigation">
+      <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+      <a class = "next" onclick = "plusSlides(-1)">&#10095;</a>
+    </div>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      if (n > slides.length)
+      {
+        slideIndex = 1;
+      }
+      if (n < 1)
+      {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++)
+      {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
+<!-- Slideshow container ends -->
+
+<br>
+
+<!--Category section starts-->
+<section class="Category" id="Category">
+
+  <a href="#" class="box">
+      <img src="EYES.png" alt="">
+      <p>EYES</p>
+  </a>
+
+  <a href="#" class="box">
+      <img src="LIPS.png" alt="">
+      <p>LIPS</p>
+  </a>
+
+  <a href="#" class="box">
+      <img src="FACES.png" alt="">
+      <p>FACE</p>
+  </a>
+
+
+</section>
+<!--Category section ends-->
+
+<!-- about section starts  -->
+<section class="about" id="about">
+
+    <div class="content">
+        <span>why choose us?</span>
+        <h3>makeup makes difference</h3>
+        <p>Lil’Touch or Lily Touch is Indonesia's trusted and most complete online shopping destination offering luxury beauty products serving women across Indonesia. As a professional manufacturing leader in the cosmetic online shopping, our services include bespoke products, private label, personalization. Lil’Touch sell beauty products in a highly professional way engaging businesses for overseas retailers, small brands and enterprises. </p>
+        <a href="about us.html" class="btn">read more</a>
+    </div>
+    
+</section>
+
+<!-- about section ends -->
+<!--On Trending section starts-->
+    <section class="OnTrending" id="OnTrending">
+
+      <div class="heading">
+        <h1>On Trending</h1>
+    </div>
+
+    <div class="lightbox">
+        <a href="ot dior.jpg"><img src="ot dior.jpg" alt=""></a>
+        <a href="ot chanel.jpg"><img src="ot chanel.jpg" alt=""></a>
+        <a href="ot nars.jpg"><img src="ot nars.jpg" alt=""></a>
+        <a href="ot estee lauder.jpg"><img src="ot estee lauder.jpg" alt=""></a>
+        <a href="ot rare beauty.jpg"><img src="ot rare beauty.jpg" alt=""></a>
+        <a href="ot ysl.jpg"><img src="ot ysl.jpg" alt=""></a>
+    </div>
+    </section>
+<!--On Trending section ends-->
+
+<!--Featured Brand section starts-->
+<section class="FeaturedBrands" id="FeaturedBrands">
+
+  <div class="heading">
+    <h1>Our Featured Brands</h1>
+</div>
+<br>
+<br>
+  <a href="#" class="box">
+      <img src="anastasia.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+      <img src="bobbi brown.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+      <img src="Chanel.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+    <img src="charlotte tilbury.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+    <img src="clio.jpg" alt="">
+    <p>Upcoming</p>
+  </a>
+
+  <a href="#" class="box">
+    <img src="dior.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+    <img src="estee lauder.jpg" alt="">
+    </a>
+
+  <a href="#" class="box">
+    <img src="Givenchy-Logo.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+    <img src="gucci.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+  <img src="guerlain.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+  <img src="hera.jpg" alt="">
+  <p>(Upcoming)</p>
+  </a>
+
+  <a href="#" class="box">
+  <img src="huda beauty.jpg" alt="">
+  </a>
+  
+  <a href="#" class="box">
+    <img src="loreal.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+  <img src="nars.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+  <img src="rare beauty.jpg" alt="">
+  <p>(Upcoming)</p>
+  </a>
+
+  <a href="#" class="box">
+  <img src="rom&nd.jpg" alt="">
+  </a>
+
+  <a href="#" class="box">
+    <img src="YSL.jpg" alt="">
+  </a>
+</section>
+<!--Featured Brand section ends-->
+
+<br>
+
+
+
+<section>
+  <footer>
+    <h1>Information</h1>
+    <a href="about us.html">About Us</a>
+    <br>
+    <a href="privacypolicy.html">Privacy Policy</a>
+    <br>
+    <a href="TermsnCondition.html">Terms and Condition</a>
+    <br>
+    <a href="HelpCenter.html">Help Center</a>
+    <br>
+    <br>
+    &copy; 2023 Lil'Touch. All rights reserved.
+  </footer>
+</section>
+
+</body>
+</html>

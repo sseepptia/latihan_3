@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseActivity"
+    android:background="@drawable/login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realtime Database"/>
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/bt_createdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="report"
+            android:text="Report" />
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/bt_viewdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="history"
+            android:text="Report History" />
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/bt_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="logout"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:text="Log Out" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
